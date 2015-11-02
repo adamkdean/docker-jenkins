@@ -7,11 +7,10 @@ RUN apt-get update && \
     apt-get install -q -y git
 
 # Install latest version of docker
-RUN apt-get install -q -y apt-transport-https && \
-    echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list && \
-    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9 && \
+RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D && \
+    echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" > /etc/apt/sources.list.d/docker.list && \
     apt-get update && \
-    apt-get install -q -y lxc-docker
+    apt-get install -q -y docker-engine
 
 # Clean up after ourselves
 RUN apt-get clean
