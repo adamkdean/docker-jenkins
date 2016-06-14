@@ -1,3 +1,8 @@
 # docker-jenkins
 
-Deprecated. Please see the [bravissimolabs/docker-jenkins](https://github.com/bravissimolabs/docker-jenkins) image.
+Dockerfile for Jenkins.
+
+Last update: Tue 05 April 2016
+Docker version: 1.10.3
+
+Will update this once personal builds are reconfigured.
